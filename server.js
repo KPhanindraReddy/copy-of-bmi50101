@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 // ✅ Connect to MongoDB Atlas
@@ -88,6 +88,7 @@ app.post("/login", async (req, res) => {
         res.json({ success: false, message: "❌ Invalid credentials" });
     }
 });
+
 
 // Add this to your server code
 const GoalSchema = new mongoose.Schema({
