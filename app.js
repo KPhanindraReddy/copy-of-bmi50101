@@ -7,7 +7,7 @@ function sendOTP() {
         return;
     }
 
-    fetch("http://127.0.0.1:3000/send-otp", {
+    fetch("https://copy-of-bmi50101.onrender.com/send-otp", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -334,7 +334,7 @@
             const userId = localStorage.getItem("userEmail");
 
             try {
-                const response = await fetch("http://127.0.0.1:3000/add-goal", {
+                const response = await fetch("https://copy-of-bmi50101.onrender.com/add-goal", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ userId, title, description, targetDate, category, priority })
@@ -371,7 +371,7 @@
             goalList.innerHTML = '';
 
             try {
-                const response = await fetch(`http://127.0.0.1:3000/get-goals?userId=${userId}`);
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/get-goals?userId=${userId}`);
                 const data = await response.json();
 
                 data.forEach(goal => {
@@ -435,7 +435,7 @@
 
         async function increaseProgress(id, amount) {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/update-goal/${id}`, {
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/update-goal/${id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ progressAmount: amount })
@@ -455,7 +455,7 @@
 
         async function decreaseProgress(id, amount) {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/update-goal/${id}`, {
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/update-goal/${id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ progressAmount: -amount })
@@ -479,7 +479,7 @@
 
         async function deleteGoal(id) {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/delete-goal/${id}`, { method: "DELETE" });
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/delete-goal/${id}`, { method: "DELETE" });
                 if (response.ok) {
                     document.getElementById('successMessage').textContent = 'Goal deleted successfully';
                     setTimeout(() => {
@@ -494,7 +494,7 @@
             }
         }async function increaseProgress(id, amount) {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/update-goal/${id}`, {
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/update-goal/${id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ progressAmount: amount })
@@ -517,7 +517,7 @@
         }
         async function increaseProgress(id, amount) {
     try {
-        const response = await fetch(`http://127.0.0.1:3000/update-goal/${id}`, {
+        const response = await fetch(`https://copy-of-bmi50101.onrender.com/update-goal/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ progressAmount: amount })

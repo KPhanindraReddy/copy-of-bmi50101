@@ -309,7 +309,7 @@
             const email = localStorage.getItem("userEmail");
             document.getElementById("emailDisplay").textContent = email;
 
-            fetch(`http://localhost:3000/api/profiles?email=${email}`)
+            fetch(`https://copy-of-bmi50101.onrender.com/api/profiles?email=${email}`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("nameDisplay").textContent = data.name || "Not set";
@@ -333,7 +333,7 @@
 
             const email = localStorage.getItem("userEmail");
 
-            await fetch("http://localhost:3000/api/profiles", {
+            await fetch("https://copy-of-bmi50101.onrender.com/api/profiles", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

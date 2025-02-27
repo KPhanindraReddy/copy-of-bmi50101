@@ -287,7 +287,7 @@
                 btn.disabled = true;
                 displaySpinner('sendOtpBtn', true);
     
-                fetch("http://127.0.0.1:3000/send-otp", {
+                fetch("https://copy-of-bmi50101.onrender.com/send-otp", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email })
@@ -318,7 +318,7 @@
                 btn.disabled = true;
                 displaySpinner('verifyOtpBtn', true);
     
-                fetch("http://127.0.0.1:3000/verify-otp", {
+                fetch("https://copy-of-bmi50101.onrender.com/verify-otp", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, otp })
@@ -348,7 +348,7 @@
                 btn.disabled = true;
                 displaySpinner('setPasswordBtn', true);
     
-                fetch("http://127.0.0.1:3000/set-password", {
+                fetch("https://copy-of-bmi50101.onrender.com/set-password", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email, password })

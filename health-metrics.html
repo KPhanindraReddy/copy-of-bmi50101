@@ -213,7 +213,7 @@
             const data = { userId, weight, height, bmi, steps };
     
             try {
-                const response = await fetch("http://127.0.0.1:3000/save-metrics", {
+                const response = await fetch("https://copy-of-bmi50101.onrender.com/save-metrics", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data),
@@ -233,7 +233,7 @@
     
         async function displayMetrics() {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/get-metrics?userId=${userId}`);
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/get-metrics?userId=${userId}`);
                 const data = await response.json();
     
                 const list = document.getElementById("metricsList");
@@ -258,7 +258,7 @@
     
         async function deleteMetric(id) {
             try {
-                const response = await fetch(`http://127.0.0.1:3000/delete-metric/${id}`, { method: "DELETE" });
+                const response = await fetch(`https://copy-of-bmi50101.onrender.com/delete-metric/${id}`, { method: "DELETE" });
                 if (response.ok) {
                     alert("✅ Metric deleted successfully!");
                     displayMetrics();
