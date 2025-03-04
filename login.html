@@ -249,7 +249,7 @@
                 messageElement.style.display = 'block';
                 if (data.success) {
                     // Store user email in localStorage
-                    localStorage.setItem("userEmail", data.userEmail);
+                    localStorage.setItem("email", data.userId);
                     
                     messageElement.classList.add('success');
                     messageElement.innerHTML = '<i class="fas fa-check-circle"></i> Login successful! Redirecting...';

@@ -331,7 +331,7 @@
                 return;
             }
 
-            const userId = localStorage.getItem("userEmail");
+            const userId = localStorage.getItem("email");
 
             try {
                 const response = await fetch("https://copy-of-bmi50101.onrender.com/add-goal", {
@@ -346,7 +346,7 @@
                     document.getElementById('successMessage').textContent = 'Goal added successfully';
                     setTimeout(() => {
                         document.getElementById('successMessage').textContent = '';
-                    }, 3000);
+                    }, 4000);
                     displayGoals();
                 } else {
                     document.getElementById('errorMessage').textContent = data.message || 'Error adding goal';
@@ -366,7 +366,7 @@
         }
 
         async function displayGoals() {
-            const userId = localStorage.getItem("userEmail");
+            const userId = localStorage.getItem("email");
             const goalList = document.getElementById('goalList');
             goalList.innerHTML = '';
 
@@ -484,7 +484,7 @@
                     document.getElementById('successMessage').textContent = 'Goal deleted successfully';
                     setTimeout(() => {
                         document.getElementById('successMessage').textContent = '';
-                    }, 3000);
+                    }, 4000);
                     displayGoals();
                 } else {
                     document.getElementById('errorMessage').textContent = 'Failed to delete goal';
@@ -507,7 +507,7 @@
                     document.getElementById('successMessage').textContent = 'Progress updated successfully';
                     setTimeout(() => {
                         document.getElementById('successMessage').textContent = '';
-                    }, 3000);
+                    }, 4000);
                 } else {
                     document.getElementById('errorMessage').textContent = data.message;
                 }
@@ -530,7 +530,7 @@
             document.getElementById('successMessage').textContent = 'Progress updated successfully';
             setTimeout(() => {
                 document.getElementById('successMessage').textContent = '';
-            }, 3000);
+            }, 4000);
         } else {
             document.getElementById('errorMessage').textContent = data.message;
         }

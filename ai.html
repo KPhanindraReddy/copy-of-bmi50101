@@ -253,7 +253,7 @@
 
     <script>
         async function fetchMetrics() {
-            const userId = localStorage.getItem("userEmail");
+            const userId = localStorage.getItem("email");
             const response = await fetch(`https://copy-of-bmi50101.onrender.com/get-metrics?userId=${userId}`);
             return response.json();
         }

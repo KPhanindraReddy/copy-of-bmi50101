@@ -180,7 +180,7 @@
 
     <script>
         // ✅ Ensure userId is retrieved before using it
-        const userId = localStorage.getItem("userEmail");
+        const userId = localStorage.getItem("email");
 
         if (!userId) {
             alert("⚠️ User not logged in! Redirecting to login page...");
@@ -234,7 +234,7 @@
         }
 
         async function displayMetrics() {
-            const userId = localStorage.getItem("userEmail"); // ✅ Retrieve user email
+            const userId = localStorage.getItem("email"); // ✅ Retrieve user email
 
             if (!userId) {
                 alert("⚠️ User not logged in! Redirecting to login page...");
